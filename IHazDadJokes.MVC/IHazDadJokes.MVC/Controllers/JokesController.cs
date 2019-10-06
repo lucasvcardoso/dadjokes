@@ -32,6 +32,22 @@ namespace IHazDadJokes.MVC.Controllers
             return PartialView(await GetRandomJoke(ServiceUrl));
         }
 
+        [HttpGet]
+        public ActionResult SearchDadJoke()
+        {
+            ViewBag.Message = "Your Dad Jokes will be displayed here!";
+
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult SearchDadJokesByTerm()
+        {
+            ViewBag.Message = "Your Dad Jokes will be displayed here!";
+
+            return View();
+        }
+
         private async Task<DadJoke> GetRandomJoke(string url)
         {
             return await _dadJokesService.GetRandomDadJoke(url);

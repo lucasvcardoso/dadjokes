@@ -1,8 +1,35 @@
-﻿
+﻿@model IHazDadJokes.MVC.Models.DadJokesViewModel
+
 @{
-    ViewBag.Title = "SearchDadJoke";
+    ViewBag.Title = "Search Dad Joke";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>SearchDadJoke</h2>
+<h2>Search Dad Jokes</h2>
+
+@using (Html.BeginForm("SearchDadJokesByTerm", "Jokes",FormMethod.Post))
+{
+    <div class="form-horizontal">
+        <h4>Search by dad jokes with this word:</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.SearchTerm, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SearchTerm, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SearchTerm, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">                
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+    <div>
+        <p>@Html.Label((string)ViewBag.Message)</p>
+    </div>
 
