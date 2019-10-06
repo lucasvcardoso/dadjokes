@@ -1,0 +1,17 @@
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\IHazDadJokes.HttpLib.Tests.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\IHazDadJokes.HttpLib.Tests.pdb
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\IHazDadJokes.HttpLib.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\nunit.framework.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\IHazDadJokes.HttpLib.pdb
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\nunit.framework.pdb
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\nunit.framework.xml
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\obj\Debug\IHazDadJokes.HttpLib.Tests.csprojAssemblyReference.cache
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\obj\Debug\IHazDadJokes.HttpLib.Tests.csproj.CoreCompileInputs.cache
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\obj\Debug\IHazDadJokes.HttpLib.Tests.csproj.CopyComplete
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\obj\Debug\IHazDadJokes.HttpLib.Tests.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\obj\Debug\IHazDadJokes.HttpLib.Tests.pdb
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\workspace\IHazDadJokes.MVC\IHazDadJokes.HttpLib.Tests\bin\Debug\Newtonsoft.Json.xml

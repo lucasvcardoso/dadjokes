@@ -1,0 +1,34 @@
+﻿@model IHazDadJokes.API.Lib.DadJoke
+
+@{
+    ViewBag.Title = "DadJoke";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="dadJoke">
+    @Html.Partial("PartialRandomDadJoke", Model)
+</div>
+
+<script type="text/javascript">
+    function updateJoke() {
+        $.ajax(
+        {
+                type: 'GET',
+                url: '@Url.Action("PartialRandomDadJoke", "Jokes")',
+                cache: false,
+                async: true,
+                success: function (data) {
+                    $('#dadJoke').html(data);
+                    console.log(data);
+                    console.log('Success');
+                },
+                error: function(data) {
+                    console.log("Call failed:"+ data.status);
+                }
+            });
+    }
+
+    $(document).ready(function () {
+        setInterval(updateJoke, 10000);
+    });
+</script>
