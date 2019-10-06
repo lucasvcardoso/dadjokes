@@ -1,0 +1,11 @@
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\IHazDadJokes.API.Lib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\IHazDadJokes.API.Lib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\IHazDadJokes.HttpLib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\Newtonsoft.Json.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\IHazDadJokes.HttpLib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Release\Newtonsoft.Json.xml
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Release\IHazDadJokes.API.Lib.csprojAssemblyReference.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Release\IHazDadJokes.API.Lib.csproj.CoreCompileInputs.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Release\IHazDadJokes.API.Lib.csproj.CopyComplete
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Release\IHazDadJokes.API.Lib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Release\IHazDadJokes.API.Lib.pdb

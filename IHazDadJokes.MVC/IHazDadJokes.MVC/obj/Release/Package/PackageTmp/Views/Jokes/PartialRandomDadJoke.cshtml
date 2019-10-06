@@ -1,0 +1,12 @@
+﻿@model IHazDadJokes.API.Lib.DadJoke
+
+<div class="jumbotron">
+    <div class="card">
+        <h1>Random Dad Joke</h1>
+
+        <blockquote class="blockquote mb-0">
+            <p>@Html.DisplayFor(model => model.Joke)</p>
+            <footer class="blockquote-footer">From https://icanhazdadjoke.com/</footer>
+        </blockquote>
+    </div>
+</div>

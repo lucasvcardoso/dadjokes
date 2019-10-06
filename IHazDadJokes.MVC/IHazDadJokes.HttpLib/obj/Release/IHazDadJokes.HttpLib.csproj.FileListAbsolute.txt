@@ -1,0 +1,9 @@
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\bin\Release\IHazDadJokes.HttpLib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\bin\Release\IHazDadJokes.HttpLib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\bin\Release\Newtonsoft.Json.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\bin\Release\Newtonsoft.Json.xml
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\obj\Release\IHazDadJokes.HttpLib.csprojAssemblyReference.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\obj\Release\IHazDadJokes.HttpLib.csproj.CoreCompileInputs.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\obj\Release\IHazDadJokes.HttpLib.csproj.CopyComplete
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\obj\Release\IHazDadJokes.HttpLib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.HttpLib\obj\Release\IHazDadJokes.HttpLib.pdb
