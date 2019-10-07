@@ -1,5 +1,6 @@
 ﻿using IHazDadJokes.API.Lib;
 using IHazDadJokes.Infrastructure.HttpLib;
+using System.Configuration;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using DadJoke = IHazDadJokes.API.Lib.DadJoke;
@@ -9,23 +10,24 @@ namespace IHazDadJokes.MVC.Controllers
     public class JokesController : Controller
     {
         private readonly IDadJokesService _dadJokesService;
-        private const string ServiceUrl = "https://icanhazdadjoke.com/";
+        private readonly IDadJokesServiceConfiguration _serviceConfig;
 
         public JokesController()
         {
-            _dadJokesService = new DadJokesService(new HttpClientWrapper());
+            _serviceConfig = ConfigurationManager.GetSection("jokes") as DadJokesServiceConfiguration;
+            _dadJokesService = new DadJokesService(new HttpClientWrapper(), _serviceConfig); 
         }
 
         [HttpGet]
         public async Task<ActionResult> RandomDadJoke()
         {
-            return View(await GetRandomJoke(ServiceUrl));
+            return View(await GetRandomJoke());
         }        
 
         [HttpGet]
         public async Task<ActionResult> PartialRandomDadJoke()
         {
-            return PartialView(await GetRandomJoke(ServiceUrl));
+            return PartialView(await GetRandomJoke());
         }
 
         [HttpGet]
@@ -43,14 +45,14 @@ namespace IHazDadJokes.MVC.Controllers
             ViewBag.IsResult = true;
             var searchTerm = Request["SearchTerm"];
 
-            var viewModel = await _dadJokesService.GetDadJokesBySearchTerm(ServiceUrl, searchTerm, 30);
+            var viewModel = await _dadJokesService.GetDadJokesBySearchTerm(searchTerm);
 
             return PartialView(viewModel);
         }
 
-        private async Task<DadJoke> GetRandomJoke(string url)
+        private async Task<DadJoke> GetRandomJoke()
         {
-            return await _dadJokesService.GetRandomDadJoke(url);
+            return await _dadJokesService.GetRandomDadJoke();
         }
     }
 }

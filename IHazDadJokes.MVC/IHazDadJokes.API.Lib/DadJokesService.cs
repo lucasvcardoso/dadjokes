@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -12,23 +13,29 @@ namespace IHazDadJokes.API.Lib
     public class DadJokesService : IDadJokesService
     {
         private readonly IHttpClientWrapper _httpClient;
+        private readonly IDadJokesServiceConfiguration _config;
+        private readonly string _serviceUrl;
+        private readonly int _limit;
 
-        public DadJokesService(IHttpClientWrapper httpClient)
+        public DadJokesService(IHttpClientWrapper httpClient, IDadJokesServiceConfiguration config)
         {
             _httpClient = httpClient;
+            _config = config;
+            _serviceUrl = _config.Url;
+            _limit = _config.Limit;
         }
 
-        public async Task<DadJokesViewModel> GetDadJokesBySearchTerm(string url, string searchTerm, int limit)
+        public async Task<DadJokesViewModel> GetDadJokesBySearchTerm(string searchTerm)
         {
-            var searchUrl = $"{url}/search?term={searchTerm}&limit={limit}";
+            var searchUrl = $"{_serviceUrl}/search?term={searchTerm}&limit={_limit}";
             var dadJokeResponseMessage = await _httpClient.Get(searchUrl);
             var dadJokes = await ProcessDadJokesList(dadJokeResponseMessage, searchTerm);
             return dadJokes;
         }
 
-        public async Task<DadJoke> GetRandomDadJoke(string url)
+        public async Task<DadJoke> GetRandomDadJoke()
         {            
-            var dadJokeResponseMessage = await _httpClient.Get(url);
+            var dadJokeResponseMessage = await _httpClient.Get(_serviceUrl);
             var dadJoke = await ProcessDadJoke(dadJokeResponseMessage);
             return dadJoke;
         }

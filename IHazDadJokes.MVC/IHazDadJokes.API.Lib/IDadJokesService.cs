@@ -8,7 +8,7 @@ namespace IHazDadJokes.API.Lib
 {
     public interface IDadJokesService
     {
-        Task<DadJoke> GetRandomDadJoke(string url);
-        Task<DadJokesViewModel> GetDadJokesBySearchTerm(string url, string searchTerm, int limit);
+        Task<DadJoke> GetRandomDadJoke();
+        Task<DadJokesViewModel> GetDadJokesBySearchTerm(string searchTerm);
     }
 }

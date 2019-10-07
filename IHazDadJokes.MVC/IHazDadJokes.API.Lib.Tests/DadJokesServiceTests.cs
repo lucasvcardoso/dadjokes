@@ -15,7 +15,6 @@ namespace IHazDadJokes.API.Lib.Tests
     {
         private DadJokesService _testee;
 
-        private const string CorrectTestUrl = "https://icanhazdadjoke.com/";
         private const string Json = "{\"id\":\"Id\",\"joke\":\"Joke\"}";
         private const string JsonList = "{\"current_page\":1,\"limit\":2,\"next_page\":1,\"previous_page\":1,\"results\":[{\"id\":\"Id\",\"joke\":\"Joke\"},{\"id\":\"Id2\",\"joke\":\"Joke2\"}],\"search_term\":\"term\",\"status\":200,\"total_jokes\":3,\"total_pages\":1}";
 
@@ -24,12 +23,18 @@ namespace IHazDadJokes.API.Lib.Tests
         private HttpResponseMessage _responseSingleJoke = new HttpResponseMessage();
         private HttpResponseMessage _responseListJokes = new HttpResponseMessage();
 
+        private DadJokesServiceConfiguration _config = new DadJokesServiceConfiguration
+        {
+            Limit = 30,
+            Url = "https://icanhazdadjokes.com/"
+        };
+
         [SetUp]
         public void SetUp()
         {
             _httpClientMock = new Mock<IHttpClientWrapper>();
 
-            _testee = new DadJokesService(_httpClientMock.Object);
+            _testee = new DadJokesService(_httpClientMock.Object, _config);
             
             _responseSingleJoke.Content = new StringContent(Json);
 
@@ -40,7 +45,7 @@ namespace IHazDadJokes.API.Lib.Tests
         public async Task GetsRandomDadJokeCorrectly()
         {
             _httpClientMock.Setup(_ => _.Get(It.IsAny<string>())).ReturnsAsync(_responseSingleJoke);
-            var dadJoke = await _testee.GetRandomDadJoke(CorrectTestUrl);
+            var dadJoke = await _testee.GetRandomDadJoke();
 
             Assert.IsNotNull(dadJoke.Id);
             Assert.IsNotNull(dadJoke.Joke);
@@ -53,7 +58,7 @@ namespace IHazDadJokes.API.Lib.Tests
         public async Task GetsDadJokesListCorrectly()
         {
             _httpClientMock.Setup(_ => _.Get(It.IsAny<string>())).ReturnsAsync(_responseListJokes);
-            var dadJokes = await _testee.GetDadJokesBySearchTerm(CorrectTestUrl, "term", 30);
+            var dadJokes = await _testee.GetDadJokesBySearchTerm("term");
 
             Assert.IsNotNull(dadJokes);
             Assert.AreEqual(2, dadJokes.ShortDadJokes.Count());
