@@ -2,7 +2,7 @@
 
 >ASP.NET MVC application that shows dad jokes from https://icanhazdadjokes.com
 
-  - Accessible [here](https://jokeschallenge.azurewebsites.net)
+  - Live demo [here](https://jokeschallenge.azurewebsites.net)
  
 ### Requirements to run the code:
 
@@ -25,6 +25,10 @@ This project uses:
 * jQuery
 * NUnit 3
 * Moq
+
+Also, for the live demo, the project have been deployed to:
+
+* Azure App Services
 
 ### Structure
 
