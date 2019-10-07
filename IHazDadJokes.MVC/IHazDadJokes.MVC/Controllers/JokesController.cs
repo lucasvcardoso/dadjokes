@@ -11,9 +11,9 @@ namespace IHazDadJokes.MVC.Controllers
         private readonly IDadJokesService _dadJokesService;
         private const string ServiceUrl = "https://icanhazdadjoke.com/";
 
-        public JokesController()
+        public JokesController(IDadJokesService dadJokesService)
         {
-            _dadJokesService = new DadJokesService(new HttpClientWrapper());
+            _dadJokesService = dadJokesService;
         }
 
         [HttpGet]
@@ -43,9 +43,9 @@ namespace IHazDadJokes.MVC.Controllers
             ViewBag.IsResult = true;
             var searchTerm = Request["SearchTerm"];
 
-            var newViewModel = await _dadJokesService.GetDadJokesBySearchTerm(ServiceUrl, searchTerm, 30);
+            var viewModel = await _dadJokesService.GetDadJokesBySearchTerm(ServiceUrl, searchTerm, 30);
 
-            return PartialView(newViewModel);
+            return PartialView(viewModel);
         }
 
         private async Task<DadJoke> GetRandomJoke(string url)

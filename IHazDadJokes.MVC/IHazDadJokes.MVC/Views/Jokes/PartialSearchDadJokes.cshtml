@@ -3,20 +3,56 @@
 <table class="table">
     <tr>
         <th>
-            <h2>You searched for jokes with: <strong>@Html.DisplayFor(modelItem => Model.SearchTerm)</strong></h2>
+            @{var totalCount = Model.ShortDadJokes.Count() + Model.MediumDadJokes.Count() + Model.LongDadJokes.Count();}
+            <h2>You searched for jokes with: <strong>@Model.SearchTerm</strong>. @totalCount jokes found!</h2>
         </th>
         <th></th>
     </tr>
+</table>
 @{
-    var jokes = Model.LongDadJokes;
-    foreach (var joke in jokes)
+    var longJokes = Model.LongDadJokes;
+    var mediumJokes = Model.MediumDadJokes;
+    var shortJokes = Model.ShortDadJokes;
+}
+    @if (shortJokes != null && shortJokes.Count() > 0)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => joke.Joke)
-            </td>
-        </tr>
+        <p>Short jokes (less then 10 words): @Model.ShortDadJokes.Count() found</p>
+        foreach (var joke in shortJokes)
+        {
+        <blockquote class="blockquote mb-0">
+                @Html.Raw(PrintEmphasizedJoke(joke.Joke, Model.SearchTerm))
+        </blockquote>
         }
     }
 
-</table>
+    @if (mediumJokes != null && mediumJokes.Count() > 0)
+    {
+        <p>Medium jokes (less then 20 words):  @Model.MediumDadJokes.Count() found</p>
+        foreach (var joke in mediumJokes)
+        {
+            <blockquote class="blockquote mb-0">
+                    @Html.Raw(PrintEmphasizedJoke(joke.Joke, Model.SearchTerm))
+            </blockquote>
+        }
+    }
+
+
+    @if (longJokes != null && longJokes.Count() > 0)
+    {
+        <p>Long jokes (more then 20 words):  @Model.LongDadJokes.Count() found</p>
+        foreach (var joke in longJokes)
+        {
+            <blockquote class="blockquote mb-0">
+                @Html.Raw(PrintEmphasizedJoke(joke.Joke, Model.SearchTerm))
+            </blockquote>
+        }
+    }
+
+
+@functions{
+    public string PrintEmphasizedJoke(string joke, string searchTerm)
+    {
+        var emphasizedJoke = joke.Replace(searchTerm, $"<strong>{searchTerm}</strong>"); 
+        return emphasizedJoke;
+    }
+}
