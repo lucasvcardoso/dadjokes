@@ -9,3 +9,14 @@ D:\workspace\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Li
 D:\workspace\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.csproj.CopyComplete
 D:\workspace\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.dll
 D:\workspace\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\IHazDadJokes.API.Lib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\IHazDadJokes.API.Lib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\IHazDadJokes.HttpLib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\Newtonsoft.Json.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\IHazDadJokes.HttpLib.pdb
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\bin\Debug\Newtonsoft.Json.xml
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.csprojAssemblyReference.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.csproj.CoreCompileInputs.cache
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.csproj.CopyComplete
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.dll
+D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.API.Lib\obj\Debug\IHazDadJokes.API.Lib.pdb
