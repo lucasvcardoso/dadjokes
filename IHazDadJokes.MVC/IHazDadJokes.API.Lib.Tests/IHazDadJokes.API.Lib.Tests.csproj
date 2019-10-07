@@ -65,9 +65,12 @@
   <ItemGroup>
     <Compile Include="DadJokesServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <EmbeddedResource Include="TestData\JokesList.json" />
+    <EmbeddedResource Include="TestData\SingleJoke.json" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IHazDadJokes.API.Lib\IHazDadJokes.API.Lib.csproj">

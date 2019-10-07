@@ -15,8 +15,8 @@ namespace IHazDadJokes.API.Lib.Tests
     {
         private DadJokesService _testee;
 
-        private const string Json = "{\"id\":\"Id\",\"joke\":\"Joke\"}";
-        private const string JsonList = "{\"current_page\":1,\"limit\":2,\"next_page\":1,\"previous_page\":1,\"results\":[{\"id\":\"Id\",\"joke\":\"Joke\"},{\"id\":\"Id2\",\"joke\":\"Joke2\"}],\"search_term\":\"term\",\"status\":200,\"total_jokes\":3,\"total_pages\":1}";
+        private string _json;
+        private string _jsonList;// = "{\"current_page\":1,\"limit\":2,\"next_page\":1,\"previous_page\":1,\"results\":[{\"id\":\"Id\",\"joke\":\"Joke\"},{\"id\":\"Id2\",\"joke\":\"Joke2\"}],\"search_term\":\"term\",\"status\":200,\"total_jokes\":3,\"total_pages\":1}";
 
         private Mock<IHttpClientWrapper> _httpClientMock;
 
@@ -32,13 +32,18 @@ namespace IHazDadJokes.API.Lib.Tests
         [SetUp]
         public void SetUp()
         {
+            _json = TestHelper.GetResourceFileContent($"{GetType().Namespace}.TestData", "SingleJoke.json");
+
+            _jsonList = TestHelper.GetResourceFileContent($"{GetType().Namespace}.TestData", "JokesList.json");
+
             _httpClientMock = new Mock<IHttpClientWrapper>();
 
             _testee = new DadJokesService(_httpClientMock.Object, _config);
             
-            _responseSingleJoke.Content = new StringContent(Json);
+            _responseSingleJoke.Content = new StringContent(_json);
 
-            _responseListJokes.Content = new StringContent(JsonList);
+            _responseListJokes.Content = new StringContent(_jsonList);
+
         }
 
         [Test]

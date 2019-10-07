@@ -1,0 +1,20 @@
+{
+  "current_page": 1,
+  "limit": 2,
+  "next_page": 1,
+  "previous_page": 1,
+  "results": [
+    {
+      "id": "Id",
+      "joke": "Joke"
+    },
+    {
+      "id": "Id2",
+      "joke": "Joke2"
+    }
+  ],
+  "search_term": "term",
+  "status": 200,
+  "total_jokes": 3,
+  "total_pages": 1
+}
