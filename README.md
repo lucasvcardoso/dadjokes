@@ -42,5 +42,5 @@ Also, for the live demo, the project have been deployed to:
 
 ### Remarks on logics and reasoning
 - Rendering and text formatting logic was kept whenever possible in the views. 
-- Controllers have only the necessary logic to call the services, except for some dependency injection logic that was kept in JokesController and would be, in a produtcion scenario, inserted in a dependency injection structure.
+- Controllers have only the necessary logic to call the services, except for some dependency injection logic that was kept in JokesController and would be, in a production scenario, inserted in a dependency injection structure.
 - Services have the actual logic to deal with fetching and processing the data that will then be returned to the controllers and sent back to be rendered by the views.
