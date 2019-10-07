@@ -1,4 +1,4 @@
-﻿@model IHazDadJokes.MVC.Models.DadJokesViewModel
+﻿@model IHazDadJokes.API.Lib.DadJokesViewModel
 
 @{
     ViewBag.Title = "Search Dad Joke";
@@ -7,14 +7,14 @@
 
 <h2>Search Dad Jokes</h2>
 
-@using (Html.BeginForm("SearchDadJokesByTerm", "Jokes",FormMethod.Post))
+@using (Html.BeginForm("PartialSearchDadJokes", "Jokes", FormMethod.Post))
 {
     <div class="form-horizontal">
         <h4>Search by dad jokes with this word:</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.SearchTerm, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SearchTerm, "Search Term",htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SearchTerm, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SearchTerm, "", new { @class = "text-danger" })
@@ -23,13 +23,40 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">                
-                <input type="submit" value="Search" class="btn btn-default" />
+                <button type="button" class="btn btn-default" onclick="searchJokes($('#SearchTerm').val())">Search</button>
             </div>
         </div>
     </div>
 }
 
-    <div>
+    <div id="dadJokes">
         <p>@Html.Label((string)ViewBag.Message)</p>
+        @{ 
+            var isResult = (bool?)ViewBag.IsResult?.Value ?? false;
+            if (isResult)
+            {
+                Html.Partial("PartialSearchDadJokes", Model);
+            }
+        }
     </div>
+
+<script type="text/javascript">
+    function searchJokes(searchTerm) {
+        console.log(searchTerm);
+        $.ajax(
+            {
+                type: 'POST',
+                url: '@Url.Action("PartialSearchDadJokes", "Jokes")',
+                cache: false,
+                async: true,
+                data: { "SearchTerm": searchTerm },
+                success: function (data) {
+                    $('#dadJokes').html(data);
+                },
+                error: function(data) {
+                    console.log("Call failed:"+ data.status);
+                }
+            });
+    }
+</script>
 

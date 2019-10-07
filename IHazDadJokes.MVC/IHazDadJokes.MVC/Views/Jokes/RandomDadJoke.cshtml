@@ -19,8 +19,6 @@
                 async: true,
                 success: function (data) {
                     $('#dadJoke').html(data);
-                    console.log(data);
-                    console.log('Success');
                 },
                 error: function(data) {
                     console.log("Call failed:"+ data.status);

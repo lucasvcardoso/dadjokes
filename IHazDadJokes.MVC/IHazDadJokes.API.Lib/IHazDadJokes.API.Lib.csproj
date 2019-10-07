@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="DadJoke.cs" />
     <Compile Include="DadJokesService.cs" />
+    <Compile Include="DadJokesViewModel.cs" />
     <Compile Include="IDadJokesService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

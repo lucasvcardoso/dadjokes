@@ -57,11 +57,11 @@ namespace IHazDadJokes.API.Lib.Tests
             var dadJokes = await _testee.GetDadJokesBySearchTerm(CorrectTestUrl, "term", 30);
 
             Assert.IsNotNull(dadJokes);
-            Assert.AreEqual(2, dadJokes.Count());
-            Assert.AreEqual("Id", dadJokes[0].Id);
-            Assert.AreEqual("Joke", dadJokes[0].Joke);
-            Assert.AreEqual("Id2", dadJokes[1].Id);
-            Assert.AreEqual("Joke2", dadJokes[1].Joke);
+            Assert.AreEqual(2, dadJokes.LongDadJokes.Count());
+            Assert.AreEqual("Id", dadJokes.LongDadJokes[0].Id);
+            Assert.AreEqual("Joke", dadJokes.LongDadJokes[0].Joke);
+            Assert.AreEqual("Id2", dadJokes.LongDadJokes[1].Id);
+            Assert.AreEqual("Joke2", dadJokes.LongDadJokes[1].Joke);
         }
     }
 }

@@ -17,11 +17,11 @@ namespace IHazDadJokes.API.Lib
             _httpClient = httpClient;
         }
 
-        public async Task<IList<DadJoke>> GetDadJokesBySearchTerm(string url, string searchTerm, int limit)
+        public async Task<DadJokesViewModel> GetDadJokesBySearchTerm(string url, string searchTerm, int limit)
         {
-            var searchUrl = $"url/search?term={searchTerm}&limit={limit}";
-            var dadJokeResponseMessage = await _httpClient.Get(url);
-            var dadJokes = await ProcessDadJokesList(dadJokeResponseMessage);
+            var searchUrl = $"{url}/search?term={searchTerm}&limit={limit}";
+            var dadJokeResponseMessage = await _httpClient.Get(searchUrl);
+            var dadJokes = await ProcessDadJokesList(dadJokeResponseMessage, searchTerm);
             return dadJokes;
         }
 
@@ -39,14 +39,19 @@ namespace IHazDadJokes.API.Lib
             return dadJoke;
         }        
 
-        private async Task<IList<DadJoke>> ProcessDadJokesList(HttpResponseMessage dadJokeResponseMessage)
+        private async Task<DadJokesViewModel> ProcessDadJokesList(HttpResponseMessage dadJokeResponseMessage, string searchTerm)
         {
             var content = await ReadDadJokesContent(dadJokeResponseMessage);
             var dadJokesJObject = JObject.Parse(content);
             var dadJokesToken = dadJokesJObject["results"].ToString();
             var dadJokesList = JsonConvert.DeserializeObject<List<DadJoke>>(dadJokesToken);
 
-            return dadJokesList;
+            var dadJokesViewModel = new DadJokesViewModel {
+                SearchTerm = searchTerm,
+                LongDadJokes = dadJokesList
+            };
+
+            return dadJokesViewModel;
         }       
 
         private static async Task<string> ReadDadJokesContent(HttpResponseMessage dadJokeResponseMessage)

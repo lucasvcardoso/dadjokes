@@ -1,0 +1,22 @@
+﻿@model IHazDadJokes.API.Lib.DadJokesViewModel
+
+<table class="table">
+    <tr>
+        <th>
+            <h2>You searched for jokes with: <strong>@Html.DisplayFor(modelItem => Model.SearchTerm)</strong></h2>
+        </th>
+        <th></th>
+    </tr>
+@{
+    var jokes = Model.LongDadJokes;
+    foreach (var joke in jokes)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => joke.Joke)
+            </td>
+        </tr>
+        }
+    }
+
+</table>
