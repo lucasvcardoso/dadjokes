@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHazDadJokes.MVC.Tests", "IHazDadJokes.MVC.Tests\IHazDadJokes.MVC.Tests.csproj", "{E9EDEF22-439A-4442-AD82-1B7C00A33605}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHazDadJokes.HttpLib.Tests", "IHazDadJokes.HttpLib.Tests\IHazDadJokes.HttpLib.Tests.csproj", "{E81F0F3B-EC25-46B7-B08D-C203A828CC2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHazDadJokes.API.Lib.Tests", "IHazDadJokes.API.Lib.Tests\IHazDadJokes.API.Lib.Tests.csproj", "{591E9A13-EF65-475F-A43D-24A953F675FA}"
@@ -32,10 +30,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E9EDEF22-439A-4442-AD82-1B7C00A33605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9EDEF22-439A-4442-AD82-1B7C00A33605}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9EDEF22-439A-4442-AD82-1B7C00A33605}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9EDEF22-439A-4442-AD82-1B7C00A33605}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E81F0F3B-EC25-46B7-B08D-C203A828CC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E81F0F3B-EC25-46B7-B08D-C203A828CC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E81F0F3B-EC25-46B7-B08D-C203A828CC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -61,7 +55,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E9EDEF22-439A-4442-AD82-1B7C00A33605} = {C78281F0-9503-403D-A7A7-25F7278027F7}
 		{E81F0F3B-EC25-46B7-B08D-C203A828CC2E} = {C4FC08A0-7516-4874-B97A-BC35C9CBF8DD}
 		{591E9A13-EF65-475F-A43D-24A953F675FA} = {B7C933F0-78FE-4AAA-B553-2D42AC9E4181}
 		{D5A4DDBD-5513-4659-8904-3C2EB54E728A} = {C4FC08A0-7516-4874-B97A-BC35C9CBF8DD}

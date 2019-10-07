@@ -20,6 +20,7 @@ namespace IHazDadJokes.HttpLib.Tests
             var response = await testee.Get(CorrectTestUrl);
             
             Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
+
             Assert.IsNotNull(response.Content);
         }
 

@@ -52,8 +52,5 @@ namespace IHazDadJokes.MVC.Controllers
         {
             return await _dadJokesService.GetRandomDadJoke(url);
         }
-
-        //[HttpGet]
-        //public ActionResult 
     }
 }

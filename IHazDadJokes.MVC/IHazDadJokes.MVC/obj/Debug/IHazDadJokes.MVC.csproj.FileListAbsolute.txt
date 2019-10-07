@@ -132,7 +132,6 @@ D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\roslyn\
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\roslyn\VBCSCompiler.exe
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\roslyn\VBCSCompiler.exe.config
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\Antlr3.Runtime.dll
-D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\Castle.Core.dll
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\EntityFramework.dll
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\EntityFramework.SqlServer.dll
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\IHazDadJokes.API.Lib.dll
@@ -150,7 +149,6 @@ D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\System.
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\WebGrease.dll
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\IHazDadJokes.API.Lib.pdb
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\IHazDadJokes.HttpLib.pdb
-D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\Castle.Core.xml
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\EntityFramework.xml
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\EntityFramework.SqlServer.xml
 D:\workspace\degreed-codechallenge\IHazDadJokes.MVC\IHazDadJokes.MVC\bin\Newtonsoft.Json.xml

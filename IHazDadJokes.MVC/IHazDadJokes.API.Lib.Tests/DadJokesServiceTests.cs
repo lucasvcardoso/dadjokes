@@ -53,15 +53,16 @@ namespace IHazDadJokes.API.Lib.Tests
         public async Task GetsDadJokesListCorrectly()
         {
             _httpClientMock.Setup(_ => _.Get(It.IsAny<string>())).ReturnsAsync(_responseListJokes);
-            var client = new HttpClientWrapper();
             var dadJokes = await _testee.GetDadJokesBySearchTerm(CorrectTestUrl, "term", 30);
 
             Assert.IsNotNull(dadJokes);
-            Assert.AreEqual(2, dadJokes.LongDadJokes.Count());
-            Assert.AreEqual("Id", dadJokes.LongDadJokes[0].Id);
-            Assert.AreEqual("Joke", dadJokes.LongDadJokes[0].Joke);
-            Assert.AreEqual("Id2", dadJokes.LongDadJokes[1].Id);
-            Assert.AreEqual("Joke2", dadJokes.LongDadJokes[1].Joke);
+            Assert.AreEqual(2, dadJokes.ShortDadJokes.Count());
+            Assert.AreEqual("Id", dadJokes.ShortDadJokes[0].Id);
+            Assert.AreEqual("Joke", dadJokes.ShortDadJokes[0].Joke);
+            Assert.AreEqual("Id2", dadJokes.ShortDadJokes[1].Id);
+            Assert.AreEqual("Joke2", dadJokes.ShortDadJokes[1].Joke);
+            Assert.AreEqual(0, dadJokes.MediumDadJokes.Count());
+            Assert.AreEqual(0, dadJokes.LongDadJokes.Count());
         }
     }
 }
