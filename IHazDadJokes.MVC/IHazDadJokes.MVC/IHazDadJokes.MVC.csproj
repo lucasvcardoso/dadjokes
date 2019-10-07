@@ -171,7 +171,6 @@
     <Content Include="Views\Jokes\PartialRandomDadJoke.cshtml" />
     <Content Include="Views\Jokes\RandomDadJoke.cshtml" />
     <Content Include="Views\Jokes\SearchDadJoke.cshtml" />
-    <Content Include="Views\Jokes\View.cshtml" />
     <Content Include="Views\Jokes\PartialSearchDadJokes.cshtml" />
   </ItemGroup>
   <ItemGroup>

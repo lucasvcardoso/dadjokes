@@ -7,8 +7,6 @@
 
 <h2>Search Dad Jokes</h2>
 
-@using (Html.BeginForm())
-{
     <div class="form-horizontal">
         <h4>Search by dad jokes with this word:</h4>
         <hr />
@@ -27,7 +25,6 @@
             </div>
         </div>
     </div>
-}
 
     <div id="dadJokes">
         <p>@Html.Label((string)ViewBag.Message)</p>
