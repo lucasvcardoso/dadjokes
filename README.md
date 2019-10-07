@@ -2,7 +2,7 @@
 
 >ASP.NET MVC application that shows dad jokes from https://icanhazdadjokes.com
 
-  - Accessible easily [here](https://jokeschallenge.azurewebsites.net)
+  - Accessible [here](https://jokeschallenge.azurewebsites.net)
  
 ### Requirements to run the code:
 
@@ -34,5 +34,9 @@ This project uses:
     - Service class library used to expose services to get random jokes from ICanHazDadJokes API and search for jokes by a given search term. Makes GET requests to the external API through HttpClientWrapper, deserializes the response, processes and returns a model or view-model to the caller.
 - IHazDadJokes.MVC
     - ASP.NET MVC web application containing the controllers that expose actions for the view logic to retrieve data and fill the views to be rendered in the browser when requested by a user.
+- Simple test projects have been created with the names of the project being tested followed by the suffix *.Tests*
 
-Rendering and text formatting logic was kept whenever possible in the views. Controllers have only the necessary logic to call the services, which have the actual logic to deal with fetching and processing the data that will then be returned to the controllers and sent back to be rendered by the views.
+### Remarks on logics and reasoning
+- Rendering and text formatting logic was kept whenever possible in the views. 
+- Controllers have only the necessary logic to call the services, except for some dependency injection logic that was kept in JokesController and would be, in a produtcion scenario, inserted in a dependency injection structure.
+- Services have the actual logic to deal with fetching and processing the data that will then be returned to the controllers and sent back to be rendered by the views.
