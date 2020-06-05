@@ -49,7 +49,8 @@ namespace IHazDadJokes.API.Lib.Tests
         [Test]
         public async Task GetsRandomDadJokeCorrectly()
         {
-            _httpClientMock.Setup(_ => _.Get(It.IsAny<string>())).ReturnsAsync(_responseSingleJoke);
+            _httpClientMock.Setup(client => client.Get(It.IsAny<string>())).ReturnsAsync(_responseSingleJoke);
+            
             var dadJoke = await _testee.GetRandomDadJoke();
 
             Assert.IsNotNull(dadJoke.Id);
