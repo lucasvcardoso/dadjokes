@@ -1,8 +1,6 @@
 # I Can Haz Dad Jokes Challenge
 
 >ASP.NET MVC application that shows dad jokes from https://icanhazdadjokes.com
-
-  - Live demo [here](https://jokeschallenge.azurewebsites.net)
  
 ### Requirements to run the code:
 
